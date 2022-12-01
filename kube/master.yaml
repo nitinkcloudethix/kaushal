@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: master-nginx
+  labels:
+    app: master-nginx
+spec:
+  containers:
+  - name: master-nginx
+    image: nitinkcloudethix/cloudethix_master_nginx_nitink:24nov
+    ports:
+    - containerPort: 80
+

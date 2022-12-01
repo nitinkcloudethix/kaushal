@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-webapp-podname
+spec:
+  selector:
+    matchLabels:
+      app: flask-webapp
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: flask-webapp
+    spec:
+      containers:
+        - name: ubuntu
+          image: nitinkcloudethix/flask_webapp_kaushal:v8001
+          ports:
+          - containerPort: 8001
